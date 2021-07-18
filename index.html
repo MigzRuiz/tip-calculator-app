@@ -34,8 +34,39 @@
     </style>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <div class="container">
+      <div class="logo"><img src="images/logo.svg" alt="App Logo" /></div>
+      <div class="main">
+        <div class="input">
+          <div class="input__wrapper">
+            <div class="input__label">Bill</div>
+            <form class="input__form">
+              <img
+                src="/images/icon-dollar.svg"
+                alt="dollar sign"
+                class="input__img"
+              />
+              <input type="number" class="input__text" placeholder="0.0" />
+            </form>
+          </div>
+          <div class="input__wrapper">
+            <div class="input__label">Select Tip %</div>
+          </div>
+          <div class="input__wrapper">
+            <div class="input__label">People</div>
+            <form class="input__form">
+              <img
+                src="/images/icon-person.svg"
+                alt="dollar sign"
+                class="input__img"
+              />
+              <input type="text" class="input__text" placeholder="0" />
+            </form>
+          </div>
+        </div>
+        <div class="output">Tip Amount / person Total / person Reset</div>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by

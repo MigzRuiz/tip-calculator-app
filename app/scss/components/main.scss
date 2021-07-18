@@ -1,0 +1,45 @@
+@use '../util/' as *;
+
+.main {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+}
+
+.input {
+  //   border: 1px solid magenta;
+
+  &__wrapper {
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cyan-d-gray-1);
+  }
+
+  &__text {
+    background-color: var(--cyan-l-gray-2);
+    border: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    color: var(--cyan-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: right;
+    padding: 0.5rem 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+  }
+
+  &__img {
+    position: absolute;
+    left: 1.5rem;
+    top: 30%;
+  }
+}
