@@ -22,8 +22,6 @@ let bill, currentTip, people, tipPerPerson, totalPerPerson;
 inputBill.addEventListener("change", (e) => {
   e.preventDefault();
   bill = parseInt(e.target.value);
-
-  console.log(currentTip);
   computeTipTotal();
 });
 
@@ -33,9 +31,14 @@ inputTip.forEach((tipEl) => {
     e.preventDefault();
 
     currentTip = parseInt(e.target.innerText.replace("%", "")) / 100;
-    console.log(currentTip);
-
     computeTipTotal();
+
+    // 3. When tip is selected, tip color will change
+    inputTip.forEach((tEl) => {
+      tEl.classList.remove("input__active");
+    });
+    tipEl.classList.add("input__active");
+    console.log(currentTip);
   });
 });
 
