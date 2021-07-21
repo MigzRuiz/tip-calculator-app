@@ -6,6 +6,9 @@
     5. Compute tip each person (bill * tip percent / people)
     6. Compute total amount per person (bill/peole + tip per person )
     7. Reset everything
+
+    8. Custom Tip logic
+    9. Fix number of people validation
 */
 
 // Variables
@@ -16,7 +19,9 @@ const outputPerson = document.querySelector(".output__amount-person");
 const outputTotal = document.querySelector(".output__amount-total");
 const resetBtn = document.querySelector(".input__reset");
 
-let bill, currentTip, people, tipPerPerson, totalPerPerson;
+const inputCustom = document.querySelector(".input__custom");
+
+let bill, customTip, currentTip, people, tipPerPerson, totalPerPerson;
 
 // 1. Need to be able to enter bill
 inputBill.addEventListener("change", (e) => {
@@ -29,16 +34,24 @@ inputBill.addEventListener("change", (e) => {
 inputTip.forEach((tipEl) => {
   tipEl.addEventListener("click", (e) => {
     e.preventDefault();
+    clearActiveBtn();
 
-    currentTip = parseInt(e.target.innerText.replace("%", "")) / 100;
-    computeTipTotal();
+    // 8. Custom Tip logic
+    if (tipEl.dataset.type === "custom") {
+      inputCustom.addEventListener("change", (e) => {
+        e.preventDefault();
 
-    // 3. When tip is selected, tip color will change
-    inputTip.forEach((tEl) => {
-      tEl.classList.remove("input__active");
-    });
-    tipEl.classList.add("input__active");
-    console.log(currentTip);
+        customTip = e.target.value;
+        currentTip = customTip / 100;
+
+        computeTipTotal();
+      });
+    } else {
+      currentTip = parseInt(e.target.innerText.replace("%", "")) / 100;
+      inputCustom.value = "";
+      tipEl.classList.add("input__active");
+      computeTipTotal();
+    }
   });
 });
 
@@ -59,6 +72,13 @@ const computeTipTotal = () => {
   outputTotal.textContent = "$" + totalPerPerson.toFixed(2);
 };
 
+// 3. When tip is selected, tip color will change
+const clearActiveBtn = () => {
+  inputTip.forEach((tEl) => {
+    tEl.classList.remove("input__active");
+  });
+};
+
 // 7. Reset everything
 resetBtn.addEventListener("click", (e) => {
   bill = 0;
@@ -69,6 +89,9 @@ resetBtn.addEventListener("click", (e) => {
 
   inputBill.value = "";
   inputPeople.value = "";
+  inputCustom.value = "";
   outputPerson.textContent = "$0.0";
   outputTotal.textContent = "$0.0";
+
+  clearActiveBtn();
 });
