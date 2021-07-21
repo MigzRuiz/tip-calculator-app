@@ -118,3 +118,23 @@
     color: var(--cyan-main);
   }
 }
+
+.people {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__error {
+    color: orangered;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.outlineRed {
+  outline: 2px solid orangered;
+  color: orangered;
+}

@@ -20,6 +20,7 @@ const outputTotal = document.querySelector(".output__amount-total");
 const resetBtn = document.querySelector(".input__reset");
 
 const inputCustom = document.querySelector(".input__custom");
+const peopleCaption = document.querySelector(".people__caption");
 
 let bill, customTip, currentTip, people, tipPerPerson, totalPerPerson;
 
@@ -41,7 +42,7 @@ inputTip.forEach((tipEl) => {
       inputCustom.addEventListener("change", (e) => {
         e.preventDefault();
 
-        customTip = e.target.value;
+        customTip = parseInt(e.target.value);
         currentTip = customTip / 100;
 
         computeTipTotal();
@@ -59,6 +60,15 @@ inputTip.forEach((tipEl) => {
 inputPeople.addEventListener("change", (e) => {
   e.preventDefault();
   people = parseInt(e.target.value);
+
+  if (people === 0) {
+    peopleCaption.classList.remove("hidden");
+    inputPeople.classList.add("outlineRed");
+  } else {
+    peopleCaption.classList.add("hidden");
+    inputPeople.classList.remove("outlineRed");
+  }
+
   computeTipTotal();
 });
 
