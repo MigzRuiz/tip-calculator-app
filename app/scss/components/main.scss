@@ -71,10 +71,10 @@
     width: 100%;
     // // margin-left: 0;
 
-    &:focus {
-      background-color: var(--cyan-main);
-      color: var(--cyan-dark);
-    }
+    // &:focus {
+    //   background-color: var(--cyan-main);
+    //   color: var(--cyan-dark);
+    // }
 
     &-reverse {
       background-color: var(--cyan-main);
@@ -82,10 +82,15 @@
       text-transform: uppercase;
     }
   }
+
+  &__active {
+    background-color: var(--cyan-main);
+    color: var(--cyan-dark);
+  }
 }
 
 .output {
-  border: 1px solid magenta;
+  // border: 1px solid magenta;
   background-color: var(--cyan-dark);
   border-radius: 1rem;
   padding: 2rem 1.4rem;

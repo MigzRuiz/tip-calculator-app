@@ -57,11 +57,11 @@
           <div class="input__wrapper">
             <div class="input__label">Select Tip %</div>
             <form class="input__form input__tipbox">
-              <button class="input__btn">5%</button>
-              <button class="input__btn">10%</button>
-              <button class="input__btn">15%</button>
-              <button class="input__btn">25%</button>
-              <button class="input__btn">50%</button>
+              <button class="input__btn input__tip">5%</button>
+              <button class="input__btn input__tip">10%</button>
+              <button class="input__btn input__tip">15%</button>
+              <button class="input__btn input__tip">25%</button>
+              <button class="input__btn input__tip">50%</button>
               <input
                 type="number"
                 class="input__text input__custom"
@@ -88,13 +88,15 @@
         <div class="output">
           <div class="output__wrapper">
             <div class="output__label">Tip Amount <span>/person</span></div>
-            <div class="output__amount output_amount-person">$4.27</div>
+            <div class="output__amount output__amount-person">$4.27</div>
           </div>
           <div class="output__wrapper">
             <div class="output__label">Total <span>/person</span></div>
-            <div class="output__amount output_amount-total">$32.79</div>
+            <div class="output__amount output__amount-total">$32.79</div>
           </div>
-          <button class="input__btn input__btn-reverse">Reset</button>
+          <button class="input__btn input__btn-reverse input__reset">
+            Reset
+          </button>
         </div>
       </div>
     </div>
