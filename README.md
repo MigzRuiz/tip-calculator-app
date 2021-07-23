@@ -31,12 +31,12 @@ Users should be able to:
 - Calculate the correct tip and total cost of the bill per person
 
 ### Screenshot
-
-![image](https://user-images.githubusercontent.com/7464927/126731412-b525b919-d92e-4737-9c72-70270de753a1.png)
 Desktop View
+![image](https://user-images.githubusercontent.com/7464927/126731666-56ef29d5-2291-47c0-a5fb-ae310cf7714b.png)
 
-![image](https://user-images.githubusercontent.com/7464927/126731491-607c254c-1f71-4529-8872-82af42930848.png)
 Mobile View
+![image](https://user-images.githubusercontent.com/7464927/126731949-65b49841-1152-453c-89f7-2a5ec6fb8031.png)
+
 
 ### Links
 
@@ -52,9 +52,8 @@ Mobile View
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- SASS
+- Gulp
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
