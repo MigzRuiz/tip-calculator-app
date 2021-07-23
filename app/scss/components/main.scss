@@ -6,10 +6,20 @@
   border-radius: 1.5rem;
   margin-top: -1rem;
   width: 100%;
+
+  @include breakpoint(large) {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    .output {
+      margin-left: 2rem;
+    }
+  }
 }
 
 .input {
-  //border: 1px solid magenta;
+  width: 100%;
 
   &__wrapper {
     margin-bottom: 1.9rem;
@@ -90,10 +100,11 @@
 }
 
 .output {
-  // border: 1px solid magenta;
+  border: 1px solid magenta;
   background-color: var(--cyan-dark);
   border-radius: 1rem;
   padding: 2rem 1.4rem;
+  width: 100%;
 
   &__wrapper {
     display: flex;

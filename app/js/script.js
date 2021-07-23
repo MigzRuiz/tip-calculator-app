@@ -61,6 +61,7 @@ inputPeople.addEventListener("change", (e) => {
   e.preventDefault();
   people = parseInt(e.target.value);
 
+  // 9. Fix number of people validation
   if (people === 0) {
     peopleCaption.classList.remove("hidden");
     inputPeople.classList.add("outlineRed");
