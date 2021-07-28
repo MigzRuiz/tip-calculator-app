@@ -32,6 +32,7 @@ Users should be able to:
 
 ### Screenshot
 Desktop View
+
 ![image](https://user-images.githubusercontent.com/7464927/126731666-56ef29d5-2291-47c0-a5fb-ae310cf7714b.png)
 
 Mobile View
